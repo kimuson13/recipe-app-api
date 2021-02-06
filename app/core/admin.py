@@ -5,8 +5,8 @@ from django.utils.translation import gettext as _
 from . import models
 # Register your models here.
 
-class UserAdmin(BaseUserAdmin):
 
+class UserAdmin(BaseUserAdmin):
 
     ordering = ['id']
     list_display = ['email', 'name']
