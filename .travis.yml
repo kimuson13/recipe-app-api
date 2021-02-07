@@ -4,7 +4,9 @@ python:
 services:
   - docker
 
-before_script: pip install docker-compose
+before_script:
+  - pip install docker-compose
+  - psql -c "CREATE DATABASE mydb;" -U postgres
 
 script:
   - docker-compose build
